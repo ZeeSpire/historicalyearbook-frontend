@@ -21,7 +21,7 @@ async function htmlFiles(directory) {
 
 test('all Historical Yearbook pages use the canonical ZeeSpire credit', async () => {
   const files = await htmlFiles(projectRoot);
-  assert.equal(files.length, 28);
+  assert.equal(files.length, 29);
   for (const file of files) {
     const html = await readFile(file, 'utf8');
     assert.ok(html.includes(credit), `${file} is missing the canonical credit`);
